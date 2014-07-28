@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Docker-snorby : Snorby web interface (Ruby on Rails)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Docker-snorby</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/przemek-isc/docker-snorby">View on GitHub</a>
+
+          <h1 id="project_title">Docker-snorby</h1>
+          <h2 id="project_tagline">Snorby web interface (Ruby on Rails)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/przemek-isc/docker-snorby/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/przemek-isc/docker-snorby/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="welcome-to-snorby-docker-container-page" class="anchor" href="#welcome-to-snorby-docker-container-page"><span class="octicon octicon-link"></span></a>Welcome to Snorby Docker Container Page.</h1>
+
+<p>This Container wads created for making or life with installation of Snorby much easier. Now we just need to run few commands and the whole Snorby based on Ruby on Rails will be created and configured inside this 
+container. Pretty Easy setup.  </p>
+
+<h1>
+<a name="mysql-database-configuration-needed-for-snorby" class="anchor" href="#mysql-database-configuration-needed-for-snorby"><span class="octicon octicon-link"></span></a>MySQL Database configuration needed for Snorby.</h1>
+
+<p>Database is needed for Snorby to work properly. Same database can be user for barnyard2 to store data from snort log files. 
+If you do not have running MySQL Database Server you can use my container that was prepared in Docker for this very purpose. </p>
+
+<p>MySQL Setup:</p>
+
+<p><code>CREATE DATABASE snorby;</code></p>
+
+<p><code>GRANT ALL ON snorby.* to 'snorbyuser'@'%' IDENTIFIED BY 'password';</code></p>
+
+<p><code>FLUSH PRIVILEGES;</code></p>
+
+<p>Make sure your server firewall is open for incoming connections to MySQL database.</p>
+
+<h1>
+<a name="download-snorby-container" class="anchor" href="#download-snorby-container"><span class="octicon octicon-link"></span></a>Download Snorby Container</h1>
+
+<p><code>docker pull polinux/snorby:latest</code></p>
+
+<p>Run image and wait around 1 minute for inatller to finish setting up the server</p>
+
+<p><code>docker run -d --name db --net host polinux/snorby:latest</code></p>
+
+<p>Docker container should be running and in 1 minute you will be able to acces it through your server ip address and port 3000.
+FYI - Make sure that firewall is accepting connections on port 3000. </p>
+
+<p>Access through: snorby.server.address:3000 (localhost:3000).</p>
+
+<p>Login details are as follows:</p>
+
+<blockquote>
+<p>login:  <a href="mailto:snorby@snorby.org">snorby@snorby.org</a></p>
+
+<p>pass;   snorby</p>
+</blockquote>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Docker-snorby maintained by <a href="https://github.com/przemek-isc">przemek-isc</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
