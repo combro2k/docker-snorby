@@ -1,7 +1,7 @@
-FROM polinux/centos7:base
+FROM polinux/centos7:latest
 MAINTAINER Przemyslaw Ozgo <linux@ozgo.info>
 
-# - You will need /polinux/idsdb:base container to be running on the same host. 
+# - You will need database container to be running on the same host. 
 # - Installing Daq and Snort interpreters
 RUN \
 yum update -y && \
