@@ -1,8 +1,10 @@
-# Welcome to Snorby Docker Container Page.
+### Snorby Docker Container.
 This Container wads created for making or life with installation of Snorby much easier. Now we just need to run few commands and the whole Snorby based on Ruby on Rails will be created and configured inside this 
-container. Pretty Easy setup.  
+container. Pretty Easy setup.
 
-# MySQL Database configuration needed for Snorby.
+Build on Snorby 2.6.2, Daq 2.0.2, Snort 2.9.6.2 
+
+### MySQL Database configuration needed for Snorby.
 Database is needed for Snorby to work properly. Same database can be user for barnyard2 to store data from snort log files. 
 If you do not have running MySQL Database Server you can use my container that was prepared in Docker for this very purpose. 
 
